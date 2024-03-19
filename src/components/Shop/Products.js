@@ -18,9 +18,7 @@ const Products = (props) => {
 
   const productList = Object.keys(DUMMY).map((id, index)=>{
     return (
-      <li key={index}>
-        <ProductItem title={DUMMY[id].title} price={DUMMY[id].price} description={DUMMY[id].description} />
-      </li>
+        <ProductItem key={index} id={id} title={DUMMY[id].title} price={DUMMY[id].price} description={DUMMY[id].description} />
     )
   })
   return (
